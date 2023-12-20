@@ -47,10 +47,13 @@ class MainActivity : AppCompatActivity(), CellClickListener {
         getJSONFromServer()
     }
     private fun getJSONFromServer() {
-        val request: Request = Request.Builder().url(URL).build()
-
-        okHttpClient.newCall(request).enqueue(object : Callback {
+        val client = OkHttpClient()
+        val request = Request.Builder()
+            .url(URL)
+            .build()
+        client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
+                TODO("Not yet implemented")
 
             }
 

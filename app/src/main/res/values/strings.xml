@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GSON</string>
+    <string name="key_link">key_here</string>
 </resources>
